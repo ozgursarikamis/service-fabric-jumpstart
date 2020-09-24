@@ -43,7 +43,7 @@ namespace FirstStatelessService
                 cancellationToken.ThrowIfCancellationRequested();
 
                 // Log messages:
-                ServiceEventSource.Current.ServiceMessage(this.Context, "Working-{0}", ++iterations);
+                ServiceEventSource.Current.ServiceMessage(Context, $"Working-{iterations}, {Context.InstanceId}", ++iterations);
 
                 await Task.Delay(TimeSpan.FromSeconds(1), cancellationToken);
             }
