@@ -23,6 +23,7 @@ namespace FirstStatelessService
         /// <returns>A collection of listeners.</returns>
         protected override IEnumerable<ServiceInstanceListener> CreateServiceInstanceListeners()
         {
+            // this methods enables us to communicate with other SF services in cluster.
             return new ServiceInstanceListener[0];
         }
 
